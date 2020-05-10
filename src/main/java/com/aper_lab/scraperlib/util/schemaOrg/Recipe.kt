@@ -8,7 +8,9 @@ import com.aper_lab.scraperlib.util.ScrappingHelper
 import com.aper_lab.scraperlib.util.gsonAdapters.AlwaysListTypeAdapterFactory
 import com.google.gson.annotations.JsonAdapter
 import com.google.gson.internal.LinkedTreeMap
-import org.threeten.bp.Duration
+import java.time.Duration
+
+//import org.threeten.bp.Duration
 
 class Recipe : JsonLDData() {
     companion object{

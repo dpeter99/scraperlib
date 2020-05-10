@@ -7,11 +7,8 @@ import com.aper_lab.scraperlib.datastore.DataStore
 import com.aper_lab.scraperlib.scrapers.*
 import com.aper_lab.scraperlib.util.HashUtils
 import com.aper_lab.scraperlib.util.URLutils
-import com.sun.org.apache.xpath.internal.operations.Bool
-import kotlinx.coroutines.Deferred
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.async
+import kotlinx.coroutines.*
+//import com.sun.org.apache.xpath.internal.operations.Bool
 import java.net.URL
 
 object RecipeAPIService {
@@ -52,6 +49,14 @@ object RecipeAPIService {
 
             rec;
         };
+    }
+
+    fun getRecipeFromUrl(url:String, storeRecipe: Boolean): Recipe?{
+        var r:Recipe? = null;
+        runBlocking {
+            r = getRecipeFromURLAsync(url, storeRecipe).await()
+        }
+        return r;
     }
 
     fun saveRecipeToDB(rec: Recipe){

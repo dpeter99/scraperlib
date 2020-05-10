@@ -8,8 +8,9 @@ import com.aper_lab.scraperlib.data.Recipe
 import com.aper_lab.scraperlib.data.RecipeStep
 import com.aper_lab.scraperlib.util.ScrappingHelper
 import org.jsoup.Jsoup
-import org.threeten.bp.Duration
+//import org.threeten.bp.Duration
 import java.net.URL
+import java.time.Duration
 
 @RecipeScraperAnotation()
 @Deprecated("Mindmegette does not have a certificate so we can't use it currently")

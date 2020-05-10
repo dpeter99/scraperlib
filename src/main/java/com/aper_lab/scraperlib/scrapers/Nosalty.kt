@@ -8,11 +8,12 @@ import com.aper_lab.scraperlib.data.Recipe
 import com.aper_lab.scraperlib.data.RecipeStep
 import com.aper_lab.scraperlib.util.ScrappingHelper
 import org.jsoup.Jsoup
-import org.threeten.bp.Duration
+/*import org.threeten.bp.Duration
 import org.threeten.bp.temporal.Temporal
-import org.threeten.bp.temporal.TemporalAmount
+import org.threeten.bp.temporal.TemporalAmount*/
 import java.net.URL
 import java.nio.charset.Charset
+import java.time.Duration
 
 @RecipeScraperAnotation()
 class Nosalty : RecipeScraper{
