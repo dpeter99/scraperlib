@@ -1,3 +1,9 @@
 /build
 
 target/
+
+gradle/
+
+.gradle/
+
+.idea/

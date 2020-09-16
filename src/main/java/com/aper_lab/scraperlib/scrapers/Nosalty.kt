@@ -46,7 +46,7 @@ class Nosalty : RecipeScraper{
                 element -> Ingredient(element.text(),"");
         }
 
-        recipe.directions = recipeFragment.select(".recept-elkeszites .column-block-content ol").select("li").mapIndexed {
+        recipe.directions = recipeFragment.select(".recept-elkeszites.dont-print .column-block-content ol").select("li").mapIndexed {
                 id, element -> RecipeStep(id+1,element.text());
         }
 

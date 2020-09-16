@@ -15,14 +15,14 @@ fun main(args: Array<String>) = runBlocking{
         //"http://www.foodnetwork.co.uk/recipes/maple-glazed-ham.html",
         //"https://www.delish.com/cooking/recipe-ideas/recipes/a52182/hot-cross-buns-recipe/"
         //"http://www.mindmegette.hu/husgomboc-sajtos-tesztaval.recept/",
-        //"https://www.nosalty.hu/recept/egeszben-sult-citromos-csirke"
-        "https://tasty.co/recipe/parchment-tomato-pesto-salmon"
+        "https://www.nosalty.hu/recept/egeszben-sult-citromos-csirke"
+        //"https://tasty.co/recipe/parchment-tomato-pesto-salmon"
     )
 
     for (site in sites) {
         launch {
             var a = RecipeAPIService.getRecipeFromURLAsync(site, false).await();
-            //print(a.toString())
+            print(a.toString())
         }
     }
 
